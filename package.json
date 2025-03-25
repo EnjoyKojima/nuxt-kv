@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "pnpm run build && wrangler dev",
+    "postinstall": "nuxt prepare",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/icon": "1.10.3",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/tailwindcss": "6.13.1",
+    "@tanstack/vue-table": "^8.21.2",
+    "@vueuse/core": "^12.7.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.477.0",
+    "nuxt": "^3.15.4",
+    "radix-vue": "^1.9.13",
+    "shadcn-nuxt": "0.11.3",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.2.0",
+    "@cloudflare/workers-types": "^4.20250204.0",
+    "@iconify-json/ic": "^1.2.2",
+    "@nuxt/eslint": "1.0.1",
+    "eslint": "^9.20.1",
+    "h3": "^1.15.0",
+    "nitro-cloudflare-dev": "^0.2.1",
+    "nitropack": "^2.10.4",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.108.1"
+  }
+}
