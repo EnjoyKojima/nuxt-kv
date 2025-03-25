@@ -16,6 +16,16 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'cloudflare_module',
+    storage: {
+      kv: {
+        driver: 'cloudflare-kv-binding',
+        binding: 'KV',
+      },
+      kv2: {
+        driver: 'cloudflare-kv-binding',
+        binding: 'KV2',
+      },
+    },
   },
 
   eslint: {

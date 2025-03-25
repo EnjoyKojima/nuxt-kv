@@ -18,6 +18,10 @@
     {
       "binding": "KV",
       "id": "5ced79fdc4a14d99b57a4e920e3ca84f"
+    },
+    {
+      "binding": "KV2",
+      "id": "bb7fbf34f92f42b8892ac31a25406988"
     }
   ]
 }
