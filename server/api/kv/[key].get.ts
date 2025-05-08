@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     key: z.string(),
   }))
 
-  const storage = useStorage('kv')
+  const storage = useStorage()
   const value = await storage.get(key)
   return { value }
 })

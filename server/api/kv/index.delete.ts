@@ -6,6 +6,6 @@ export default defineEventHandler(async (event) => {
     key: z.string(),
   }))
 
-  const storage = useStorage('kv')
+  const storage = useStorage()
   await storage.removeItem(key)
 })

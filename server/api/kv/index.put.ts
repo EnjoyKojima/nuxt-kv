@@ -7,6 +7,6 @@ export default defineEventHandler(async (event) => {
     value: z.string(),
   }))
 
-  const storage = useStorage('kv')
+  const storage = useStorage()
   await storage.setItem(key, value)
 })
