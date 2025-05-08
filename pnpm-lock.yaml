@@ -29,6 +29,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      h3-zod:
+        specifier: ^0.5.3
+        version: 0.5.3(h3@1.15.0)(zod@3.24.4)
       lucide-vue-next:
         specifier: ^0.477.0
         version: 0.477.0(vue@3.5.13(typescript@5.7.3))
@@ -53,6 +56,9 @@ importers:
       vue-router:
         specifier: latest
         version: 4.5.0(vue@3.5.13(typescript@5.7.3))
+      zod:
+        specifier: ^3.24.4
+        version: 3.24.4
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.2.0
@@ -2755,6 +2761,12 @@ packages:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  h3-zod@0.5.3:
+    resolution: {integrity: sha512-wqlRd/d5d9sNYxmNglnL63J4v5HiZZrcXdLIiU2cBsy5gTwxrSH1AqtNrVkuUleshgNOAQldbuO06phdUIxuKA==}
+    peerDependencies:
+      h3: ^1.6.0
+      zod: ^3.21.0
+
   h3@1.15.0:
     resolution: {integrity: sha512-OsjX4JW8J4XGgCgEcad20pepFQWnuKH+OwkCJjogF3C+9AZ1iYdtB4hX6vAb5DskBiu5ljEXqApINjR8CqoCMQ==}
 
@@ -4983,6 +4995,9 @@ packages:
 
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+
+  zod@3.24.4:
+    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -8003,6 +8018,11 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
+  h3-zod@0.5.3(h3@1.15.0)(zod@3.24.4):
+    dependencies:
+      h3: 1.15.0
+      zod: 3.24.4
+
   h3@1.15.0:
     dependencies:
       cookie-es: 1.2.2
@@ -10668,5 +10688,7 @@ snapshots:
       readable-stream: 4.7.0
 
   zod@3.22.3: {}
+
+  zod@3.24.4: {}
 
   zwitch@2.0.4: {}
