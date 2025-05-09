@@ -9,5 +9,8 @@ export default defineEventHandler(async (event) => {
     value: z.string(),
   }))
 
-  await event.context.cloudflare.env.KV.put(key, value)
+  const storage = useStorage<string>('kv')
+  event.context.cloudflare.context.waitUntil(
+    storage.set(key, value),
+  )
 })
