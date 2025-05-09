@@ -7,6 +7,5 @@ export default defineEventHandler(async (event) => {
     value: z.string(),
   }))
 
-  const storage = useStorage<string>('kv')
-  await storage.setItem(key, value)
+  await event.context.cloudflare.env.KV.put(key, value)
 })

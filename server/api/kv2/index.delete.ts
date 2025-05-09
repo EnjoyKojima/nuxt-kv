@@ -6,6 +6,5 @@ export default defineEventHandler(async (event) => {
     key: z.string(),
   }))
 
-  const storage = useStorage<string>('kv')
-  await storage.removeItem(key)
+  await event.context.cloudflare.env.KV.delete(key)
 })
