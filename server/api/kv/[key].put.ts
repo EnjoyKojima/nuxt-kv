@@ -11,6 +11,12 @@ export default defineEventHandler(async (event) => {
 
   const storage = useStorage<string>('kv')
   event.context.cloudflare.context.waitUntil(
-    storage.set(key, value),
+    // https://developers.cloudflare.com/kv/api/write-key-value-pairs/#put-method
+    storage.set(key, value, {
+      expirationTtl: 60,
+      metadata: {
+        myname: 'kojima',
+      },
+    }),
   )
 })
